@@ -1,12 +1,13 @@
 ﻿
-string name;
-int num4,facn;
+string name, minus, mayus;
+int num4, facn, numn;
 double radio,area, perimetro,an, al;
 
 //Primero que nada se le solicita al usuario su nombre para así darle una pequeña bienvenida.
 Console.WriteLine("Primero que nada, dime, ¿Como te llamas?");
     name = Console.ReadLine();
 Console.WriteLine($"Bienvenid@ {name}, a continuación se te solicitarán ciertos por faor insertalos de manera correcta.");
+
 
 //Calculo del radio de un circulo.
 Console.WriteLine("\nPor favor inserta a continuación el radio del circulo que deseas calcular:");
@@ -22,6 +23,8 @@ static double AreaC(double radio)
 
 area = AreaC(radio);
 Console.WriteLine($"El area del circulo es en total: \n{area}");
+
+
 
 //Obtención del perimetro de un triangulo.
 Console.WriteLine("Por favor inserta a continuación la altura y el ancho del perimetro que deseas calcular:");
@@ -39,10 +42,8 @@ Console.WriteLine("Inserta la altura del perimetro del triangulo que deseas calc
     perimetro = Perimetros(an, al);
 Console.WriteLine($"El perimetro total del triangulo es: \n{perimetro}");
 
-
-
+//Aquí realizo los calculos para determinar el promedio de n numeros en una lista de n numeros.
 Console.WriteLine("Por favor inserta a continuación la lista de numeros enteros de los cuales desesas obtener un promedio:");
-
 
 
 
@@ -60,7 +61,28 @@ else
 }
 
 
-Console.WriteLine("Por favor inserta a continuación los numeros que deseas sumar:");
+//Aquí realizo la suma de un n numero natural
+Console.WriteLine("Por favor inserta a continuación el n numero natural que deseas sumar:");
+numn = Convert.ToInt32(Console.ReadLine());
+
+static int suman(int n)
+{
+    int suma = (n * (n + 1) / 2);
+    return suma;
+}
+Console.WriteLine($"El resultado de la suma de {numn} es: \n{suman}");
+
+
+//Aquí realizo la conversión de una cadena de letras en minusculas a mayusculas.
+Console.WriteLine("Por favor inserte a continuación la cadena de letras que desea convertir en Mayusculas: ");
+minus = Console.ReadLine();
+static string Mayus(string cad)
+{
+    return cad.ToUpper();
+}
+mayus = Mayus(minus);
+Console.WriteLine($"El resultado de la conversión de la cadena a Mayusculas es: {mayus}");
+
 
 //Calculo del factorial de n numero.
 Console.WriteLine("Por favor inserta a continuación el numero del cual quieres obtener el factorial:");
@@ -76,4 +98,6 @@ static int Fact(int facn)
         return Fact;
 }
 Console.WriteLine($"El factorial de {facn} es: {Fact}");
+
+
 Console.ReadKey();
