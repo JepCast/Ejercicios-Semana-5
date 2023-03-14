@@ -1,7 +1,7 @@
 ﻿
 string name, minus, mayus;
 int num4, facn, numn;
-double radio,area, perimetro,an, al;
+double radio,area, perimetro,an, al, x1, x2, y1, y2;
 
 //Primero que nada se le solicita al usuario su nombre para así darle una pequeña bienvenida.
 Console.WriteLine("Primero que nada, dime, ¿Como te llamas?");
@@ -46,7 +46,6 @@ Console.WriteLine($"El perimetro total del triangulo es: \n{perimetro}");
 Console.WriteLine("Por favor inserta a continuación la lista de numeros enteros de los cuales desesas obtener un promedio:");
 
 
-
 //Determinación si un numero es par o impar.
 Console.WriteLine("Por favor inserta a continuación el numero que quieres saber si es par o impar:");
 num4=Convert.ToInt32(Console.ReadLine());
@@ -61,6 +60,37 @@ else
 }
 
 
+
+//Aquí realizo la conversión de una cadena de letras en minusculas a mayusculas.
+Console.WriteLine("Por favor inserte a continuación la cadena de letras que desea convertir en Mayusculas: ");
+    minus = Console.ReadLine();
+static string Mayus(string cad)
+{
+    return cad.ToUpper();
+}
+mayus = Mayus(minus);
+Console.WriteLine($"El resultado de la conversión de la cadena a Mayusculas es: {mayus}");
+
+
+
+//Aquí realizo los calculos para determinar la distancia entre dos puntos de un plano cartesiano.
+Console.WriteLine("Por favor inserta a continuación inserte la distancia entre dos puntos de un plano cartesiano, recibiendo como parámetros las cordenadas X y Y de ambos puntos:");
+    Console.WriteLine("Inserta continuación el primer valor de X: ");
+        x1=Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("Inserta continuación el segundo valor de X: ");
+        x2 = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("Inserta continuación el primer valor de Y: ");
+        y1 = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("Inserta continuación el segundo valor de Y: ");
+        y2 = Convert.ToDouble(Console.ReadLine());
+
+static double Dist(double x1, double y1, double x2, double y2)
+{
+    double dist= Math.Sqrt(Math.Pow(x2-x1,1)+Math.Pow(y2-y1,2));
+    return dist;
+}
+Console.WriteLine($"La distancia entre los dos puntos del plano cartesiando es: \n{Dist}");
+
 //Aquí realizo la suma de un n numero natural
 Console.WriteLine("Por favor inserta a continuación el n numero natural que deseas sumar:");
 numn = Convert.ToInt32(Console.ReadLine());
@@ -72,16 +102,6 @@ static int suman(int n)
 }
 Console.WriteLine($"El resultado de la suma de {numn} es: \n{suman}");
 
-
-//Aquí realizo la conversión de una cadena de letras en minusculas a mayusculas.
-Console.WriteLine("Por favor inserte a continuación la cadena de letras que desea convertir en Mayusculas: ");
-minus = Console.ReadLine();
-static string Mayus(string cad)
-{
-    return cad.ToUpper();
-}
-mayus = Mayus(minus);
-Console.WriteLine($"El resultado de la conversión de la cadena a Mayusculas es: {mayus}");
 
 
 //Calculo del factorial de n numero.
