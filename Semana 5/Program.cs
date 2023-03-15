@@ -7,7 +7,7 @@ try
     //Primero que nada se le solicita al usuario su nombre para así darle una pequeña bienvenida.
     Console.WriteLine("Primero que nada, dime, ¿Como te llamas?");
         name = Console.ReadLine();
-    Console.WriteLine($"Bienvenid@ {name}, a continuación se te solicitarán ciertos por faor insertalos de manera correcta.");
+    Console.WriteLine($"Bienvenid@ {name}, a continuación se te solicitarán ciertos datos por favor insertalos de adecuadamente.");
 
 
     //Calculo del radio de un circulo.
@@ -98,7 +98,7 @@ try
 
 
     //Aquí realizo los calculos para determinar la distancia entre dos puntos de un plano cartesiano.
-    Console.WriteLine("Por favor inserta a continuación inserte la distancia entre dos puntos de un plano cartesiano, recibiendo como parámetros las cordenadas X y Y de ambos puntos:");
+    Console.WriteLine("Por favor inserta a continuación la distancia entre dos puntos de un plano cartesiano, recibiendo como parámetros las cordenadas X y Y de ambos puntos:");
         Console.WriteLine("Inserta continuación el primer valor de X: ");
             x1 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine("Inserta continuación el segundo valor de X: ");
