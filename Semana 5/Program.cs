@@ -1,4 +1,5 @@
-﻿string name, minus, mayus;
+﻿
+string name, minus, mayus;
 int num4, facn, numn, nl1, nl2, nl3, nl4, nl5;
 double radio, area, perimetro, an, al, x1, x2, y1, y2;
 try
@@ -41,7 +42,6 @@ try
     Console.WriteLine($"El perimetro total del triangulo es: \n{perimetro}");
 
 
-
     //Aquí realizo los calculos para determinar el promedio de n numeros en una lista de 5 numeros, utilizando un foreach y un count.
     //Recorriendo los elementos de la lista con el foreach y count para así devolver el conjunto de valores de mi lista
     Console.WriteLine("\nPor favor inserta a continuación la lista de 5 numeros enteros de los cuales desesas obtener un promedio:");
@@ -72,7 +72,6 @@ try
     Console.WriteLine($"\nEl promedio de la lista de números es: {promedio}");
 
 
-
     //Determinación si un numero es par o impar.
     Console.WriteLine("\nPor favor inserta a continuación el numero que quieres saber si es par o impar:");
         num4 = Convert.ToInt32(Console.ReadLine());
@@ -87,7 +86,6 @@ try
     }
 
 
-
     //Aquí realizo la conversión de una cadena de letras en minusculas a mayusculas.
     Console.WriteLine("Por favor inserte a continuación la cadena de letras que desea convertir en Mayusculas: ");
         minus = Console.ReadLine();
@@ -97,7 +95,6 @@ try
     }
         mayus = Mayus(minus);
     Console.WriteLine($"El resultado de la conversión de la cadena a Mayusculas es: {mayus}");
-
 
 
     //Aquí realizo los calculos para determinar la distancia entre dos puntos de un plano cartesiano.
